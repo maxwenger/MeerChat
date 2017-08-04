@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="MineChat:jar">
+    <output-path>$USER_HOME$/Desktop/spigot/plugins</output-path>
+    <root id="archive" name="MineChat.jar">
+      <element id="module-output" name="MineChat" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../buildtools/Spigot/Spigot-API/target/spigot-api-1.12-R0.1-SNAPSHOT.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
