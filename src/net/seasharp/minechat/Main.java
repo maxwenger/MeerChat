@@ -1,41 +1,29 @@
 package net.seasharp.minechat;
 
-import org.bukkit.configuration.file.FileConfiguration;
-
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin{
 
+    private Configuration config;
 
     public void onEnable() {
-        registerConfig();
+        loadConfig();
+        getLogger().info("using discord token: '" + config.DiscordClientToken + "'");
         registerEvents();
     }
 
     private void registerEvents() {
-        getServer().getPluginManager().registerEvents(new AsyncPlayerChatListener(), this);
+        getServer().getPluginManager().registerEvents(new AsyncPlayerChatListener(config.DiscordClientToken, config.DiscordChannelId), this);
     }
 
-    private void registerConfig() {
-        FileConfiguration config = this.getConfig();
-
-        saveDefaultConfigs(config);
-        registerDiscord(config);
-    }
-
-    private void registerDiscord(FileConfiguration config) {
-        String discordToken = config.getString("discord-token");
-        Discord.setToken(discordToken);
-        getLogger().info("Discord connected.");
-    }
-
-    private void saveDefaultConfigs(FileConfiguration config) {
-        config.options().copyDefaults(true);
-        saveConfig();
+    private void loadConfig() {
+        config = new Configuration(this);
+        config.saveDefaultConfig();
+        config.loadConfig();
     }
 
     public void onDisable() {
-        saveConfig();
+        config.saveConfig();
     }
 
 }

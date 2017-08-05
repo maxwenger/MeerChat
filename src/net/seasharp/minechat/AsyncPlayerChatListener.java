@@ -1,15 +1,25 @@
 package net.seasharp.minechat;
 
-import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class AsyncPlayerChatListener implements Listener {
 
+    private String token;
+    DiscordBot bot;
+
+    public AsyncPlayerChatListener(String token, String channelId) {
+        this.token = token;
+        bot = new DiscordBot(token, channelId);
+    }
+
     // TODO: Handle `Event.isAsynchronous()` properly.
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent event) {
-        Bukkit.broadcastMessage(event.getPlayer().getDisplayName() + ": " + event.getMessage());
+        String message = event.getPlayer().getDisplayName() + ": " + event.getMessage();
+        bot.sendMessage(message);
     }
+
+
 }
