@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4000bd55-3dfa-4c70-9f40-8d8b5afaca82" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/MineChat_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/spigot_1_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/seasharp/minechat/AsyncPlayerChatListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/seasharp/minechat/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/plugin.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AsyncPlayerChatListener.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AsyncPlayerChatListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/seasharp/minechat/AsyncPlayerChatListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -43,6 +38,16 @@
                 <element signature="e#374#375#0" expanded="true" />
                 <element signature="e#433#434#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,6 +88,7 @@
         <option value="$PROJECT_DIR$/src/net/seasharp/minechat/Main.java" />
         <option value="$PROJECT_DIR$/src/net/seasharp/minechat/AsyncPlayerChatListner.java" />
         <option value="$PROJECT_DIR$/src/net/seasharp/minechat/AsyncPlayerChatListener.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -604,12 +610,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501902149885</updated>
-      <workItem from="1501902151248" duration="2586000" />
+      <workItem from="1501902151248" duration="3206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2586000" />
+    <option name="totallyTimeSpent" value="3206000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1853" height="942" extended-state="6" />
@@ -699,6 +705,14 @@
             <element signature="e#374#375#0" expanded="true" />
             <element signature="e#433#434#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
