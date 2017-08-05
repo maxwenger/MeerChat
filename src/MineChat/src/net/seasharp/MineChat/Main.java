@@ -1,10 +1,9 @@
-package net.seasharp.net.MineChat;
+package net.seasharp.MineChat;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.Bukkit;
 
 import java.util.logging.Level;
 
