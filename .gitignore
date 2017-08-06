@@ -12,6 +12,7 @@
 
 # Intelj Files
 .iml
+.idea/
 
 # Package Files #
 *.jar
