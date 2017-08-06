@@ -9,15 +9,15 @@ public class AsyncPlayerChatListener implements Listener {
     private String token;
     DiscordBot bot;
 
-    public AsyncPlayerChatListener(String token, String channelId) {
+    public AsyncPlayerChatListener(String token, String channelName, int channelIndex) {
         this.token = token;
-        bot = new DiscordBot(token, channelId);
+        bot = new DiscordBot(token, channelName, channelIndex);
     }
 
     // TODO: Handle `Event.isAsynchronous()` properly.
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent event) {
-        String message = event.getPlayer().getDisplayName() + ": " + event.getMessage();
+        String message = "**<" + event.getPlayer().getDisplayName() + ">** " + event.getMessage();
         bot.sendMessage(message);
     }
 

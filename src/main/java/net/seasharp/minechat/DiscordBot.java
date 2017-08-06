@@ -9,9 +9,10 @@ import net.dv8tion.jda.core.entities.TextChannel;
 public class DiscordBot {
 
     private JDA jda;
-    private String channelId;
+    private String channelName;
+    private int channelIndex;
 
-    public DiscordBot(String token, String channelId) {
+    public DiscordBot(String token, String channelName, int channelIndex) {
         try {
             jda = new JDABuilder(AccountType.BOT)
                     .setToken(token)
@@ -20,11 +21,13 @@ public class DiscordBot {
             e.printStackTrace();
         }
 
-        this.channelId = channelId;
+        this.channelName = channelName;
+        this.channelIndex = channelIndex;
     }
 
     public void sendMessage(String message) {
-        TextChannel channel = jda.getTextChannelById(channelId);
+        //TextChannel channel = jda.getTextChannelById(channelId);
+        TextChannel channel = jda.getTextChannelsByName(channelName, true).get(0);
         channel.sendMessage(message).complete();
     }
 }

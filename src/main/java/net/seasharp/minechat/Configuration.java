@@ -5,7 +5,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Configuration {
     public String DiscordClientToken;
-    public String DiscordChannelId;
+    public String DiscordChannelName;
+    public int DiscordChannelIndex;
 
     private FileConfiguration config;
     private JavaPlugin plugin;
@@ -26,6 +27,7 @@ public class Configuration {
 
     public void loadConfig() {
         DiscordClientToken = config.getString("discord-token");
-        DiscordChannelId = config.getString("discord-channel-id");
+        DiscordChannelName = config.getString("discord-channel-name");
+        DiscordChannelIndex = config.getInt("discord-channel-index");
     }
 }

@@ -8,12 +8,12 @@ public class Main extends JavaPlugin{
 
     public void onEnable() {
         loadConfig();
-        getLogger().info("using discord token: '" + config.DiscordClientToken + "'");
+        getLogger().info("Using discord token: '" + config.DiscordClientToken + "'");
         registerEvents();
     }
 
     private void registerEvents() {
-        getServer().getPluginManager().registerEvents(new AsyncPlayerChatListener(config.DiscordClientToken, config.DiscordChannelId), this);
+        getServer().getPluginManager().registerEvents(new AsyncPlayerChatListener(config.DiscordClientToken, config.DiscordChannelName, config.DiscordChannelIndex), this);
     }
 
     private void loadConfig() {
