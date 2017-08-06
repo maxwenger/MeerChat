@@ -8,7 +8,8 @@ public class Main extends JavaPlugin{
 
     public void onEnable() {
         loadConfig();
-        getLogger().info("Using discord token: '" + config.DiscordClientToken + "'");
+        getLogger().info("Using Discord token: '" + config.DiscordClientToken + "'");
+        getLogger().info("Using Discord channel: '#" + config.DiscordChannelName + "' at index '" + config.DiscordChannelIndex + "'");
         registerEvents();
     }
 

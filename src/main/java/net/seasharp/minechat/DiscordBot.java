@@ -26,8 +26,7 @@ public class DiscordBot {
     }
 
     public void sendMessage(String message) {
-        //TextChannel channel = jda.getTextChannelById(channelId);
-        TextChannel channel = jda.getTextChannelsByName(channelName, true).get(0);
+        TextChannel channel = jda.getTextChannelsByName(channelName, true).get(channelIndex);
         channel.sendMessage(message).complete();
     }
 }

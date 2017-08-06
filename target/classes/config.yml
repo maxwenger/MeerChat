@@ -1,0 +1,3 @@
+discord-token: 'Discord token here!'
+discord-channel-name: 'Discord channel name here!'
+discord-channel-index: '(Default 0) Use only if more than one channel of the same name. 0 = #1, 1 = #2, etc.'
