@@ -1,6 +1,5 @@
 package net.seasharp.minechat;
 
-
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
@@ -32,6 +31,4 @@ public class DiscordBot {
         TextChannel channel = jda.getTextChannelsByName(channelName, true).get(channelIndex);
         channel.sendMessage(message).complete();
     }
-
-
 }
