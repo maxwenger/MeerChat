@@ -8,7 +8,4 @@ use-player-leave-listener: true
 # Default is 0
 discord-channel-index: 0
 
-commands:
-  meerchat:
-    description: Controls the Meerchat plugin.
-    usage: /meerchat
+

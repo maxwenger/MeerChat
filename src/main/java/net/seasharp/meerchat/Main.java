@@ -1,8 +1,5 @@
 package net.seasharp.meerchat;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.text.SimpleDateFormat;
@@ -26,12 +23,7 @@ public class Main extends JavaPlugin{
 
         bot.sendMessage("*[MeerChat v0.1 initialized - " + new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime()) + "]*");
 
-        getCommand("meerchat").setExecutor(new CommandExecutor() {
-            @Override
-            public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-                return true;
-            }
-        });
+        getCommand("meerchat-reload").setExecutor(new PlayerCommandListener());
     }
 
     private void registerEvents() {
