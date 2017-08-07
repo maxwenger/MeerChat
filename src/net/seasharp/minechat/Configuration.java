@@ -3,6 +3,8 @@ package net.seasharp.minechat;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.io.File;
+
 public class Configuration {
     public String DiscordClientToken;
     public String DiscordChannelId;
@@ -15,7 +17,26 @@ public class Configuration {
         this.config = plugin.getConfig();
     }
 
-    public void saveDefaultConfig() {
+    public void createConfig() {
+        try {
+            if (!plugin.getDataFolder().exists()) {
+                plugin.getDataFolder().mkdirs();
+            }
+            File file = new File(plugin.getDataFolder(), "config.yml");
+            if (!file.exists()) {
+                plugin.getLogger().info("Config.yml not found, creating!");
+                saveDefaultConfig();
+            } else {
+                plugin.getLogger().info("Config.yml found, loading!");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+
+    }
+
+    private void saveDefaultConfig() {
         config.options().copyDefaults(true);
         saveConfig();
     }

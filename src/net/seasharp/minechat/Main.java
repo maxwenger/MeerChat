@@ -18,7 +18,7 @@ public class Main extends JavaPlugin{
 
     private void loadConfig() {
         config = new Configuration(this);
-        config.saveDefaultConfig();
+        config.createConfig();
         config.loadConfig();
     }
 
