@@ -1,4 +1,4 @@
-package net.seasharp.minechat;
+package net.seasharp.meerchat;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

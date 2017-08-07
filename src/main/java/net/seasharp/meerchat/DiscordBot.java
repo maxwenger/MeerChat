@@ -1,4 +1,4 @@
-package net.seasharp.minechat;
+package net.seasharp.meerchat;
 
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;

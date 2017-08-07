@@ -1,4 +1,4 @@
-package net.seasharp.minechat;
+package net.seasharp.meerchat;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
