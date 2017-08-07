@@ -17,6 +17,4 @@ public class AsyncPlayerChatListener implements Listener {
         String message = "**<" + event.getPlayer().getDisplayName() + ">** " + event.getMessage();
         bot.sendMessage(message);
     }
-
-
 }
