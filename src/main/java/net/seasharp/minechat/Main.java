@@ -46,6 +46,8 @@ public class Main extends JavaPlugin{
 
     public void onDisable() {
         config.saveConfig();
+
+        bot.sendMessage("*[MineChat v0.1 has stopped - " + new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime()) + "]*");
     }
 
 }

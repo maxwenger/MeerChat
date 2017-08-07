@@ -17,6 +17,9 @@ public class DiscordBot {
             jda = new JDABuilder(AccountType.BOT)
                     .setToken(token)
                     .buildBlocking();
+
+            // Init the Discord chat event listener
+            jda.addEventListener(new DiscordCommandListener());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -26,8 +29,9 @@ public class DiscordBot {
     }
 
     public void sendMessage(String message) {
-
         TextChannel channel = jda.getTextChannelsByName(channelName, true).get(channelIndex);
         channel.sendMessage(message).complete();
     }
+
+
 }
