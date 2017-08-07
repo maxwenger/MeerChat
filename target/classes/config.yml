@@ -1,3 +1,6 @@
 discord-token: 'REPLACE THIS'
 discord-channel-name: 'REPLACE THIS'
 discord-channel-index: 0
+use-chat-listener: true
+use-player-join-listener: true
+use-player-leave-listener: true
