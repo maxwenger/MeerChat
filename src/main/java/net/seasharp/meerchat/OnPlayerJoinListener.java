@@ -13,7 +13,7 @@ public class OnPlayerJoinListener implements Listener{
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        String message = "*" + event.getPlayer().getDisplayName() + " has joined the server*";
+        String message = "*" + event.getPlayer().getPlayerListName() + " has joined the server*";
         bot.sendMessage(message);
     }
 }
