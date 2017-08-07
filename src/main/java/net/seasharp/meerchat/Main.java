@@ -1,5 +1,8 @@
 package net.seasharp.meerchat;
 
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.text.SimpleDateFormat;
@@ -10,6 +13,7 @@ public class Main extends JavaPlugin{
     private Configuration config;
     private DiscordBot bot;
 
+    @Override
     public void onEnable() {
         loadConfig();
 
@@ -22,6 +26,12 @@ public class Main extends JavaPlugin{
 
         bot.sendMessage("*[MeerChat v0.1 initialized - " + new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime()) + "]*");
 
+        getCommand("meerchat").setExecutor(new CommandExecutor() {
+            @Override
+            public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
+                return true;
+            }
+        });
     }
 
     private void registerEvents() {
@@ -36,6 +46,7 @@ public class Main extends JavaPlugin{
         if (config.UsePlayerLeaveListener) {
             getServer().getPluginManager().registerEvents(new OnPlayerLeaveListener(bot), this);
         }
+
     }
 
     private void loadConfig() {
@@ -44,6 +55,7 @@ public class Main extends JavaPlugin{
         config.loadConfig();
     }
 
+    @Override
     public void onDisable() {
         config.saveConfig();
 
