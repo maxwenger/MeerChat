@@ -1,11 +1,15 @@
-package net.seasharp.minechat;
+package net.seasharp.meerchat;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Configuration {
     public String DiscordClientToken;
-    public String DiscordChannelId;
+    public String DiscordChannelName;
+    public int DiscordChannelIndex;
+    public boolean UseChatListener;
+    public boolean UsePlayerJoinListener;
+    public boolean UsePlayerLeaveListener;
 
     private FileConfiguration config;
     private JavaPlugin plugin;
@@ -26,6 +30,10 @@ public class Configuration {
 
     public void loadConfig() {
         DiscordClientToken = config.getString("discord-token");
-        DiscordChannelId = config.getString("discord-channel-id");
+        DiscordChannelName = config.getString("discord-channel-name");
+        DiscordChannelIndex = config.getInt("discord-channel-index");
+        UseChatListener = config.getBoolean("use-chat-listener");
+        UsePlayerJoinListener = config.getBoolean("use-player-join-listener");
+        UsePlayerLeaveListener = config.getBoolean("use-player-leave-listener");
     }
 }
