@@ -49,7 +49,7 @@ public class Main extends JavaPlugin{
 
     @Override
     public void onDisable() {
-        config.saveConfig();
+        //config.saveConfig();
 
         bot.sendMessage("*[MeerChat v0.1 has stopped - " + new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime()) + "]*");
     }
