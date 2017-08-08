@@ -7,3 +7,5 @@ use-player-leave-listener: true
 # Use this if you are referencing a channel with the same name
 # Default is 0
 discord-channel-index: 0
+
+
