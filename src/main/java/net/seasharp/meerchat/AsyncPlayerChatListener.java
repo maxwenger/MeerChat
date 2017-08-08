@@ -6,7 +6,6 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class AsyncPlayerChatListener implements Listener {
 
-    // TODO: Handle `Event.isAsynchronous()` properly.
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent event) {
         String message = "**<" + event.getPlayer().getPlayerListName() + ">** " + event.getMessage();
