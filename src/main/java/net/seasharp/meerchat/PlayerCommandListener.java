@@ -19,7 +19,7 @@ public class PlayerCommandListener implements CommandExecutor{
 
         senderPlayer.sendMessage("§o[MeerChat is being reloaded - " + new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime()) + "]§o");
 
-        // Since there isn't a reload() function, I'll disable and enable it again. This reloads the config as well! Super dope.
+        // Since there isn't a reload() function, I'll disable and enable it again. This reloads the config as well!
         getServer().getPluginManager().disablePlugin(plugin);
         getServer().getPluginManager().enablePlugin(plugin);
 
