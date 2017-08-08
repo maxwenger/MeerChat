@@ -30,14 +30,10 @@ public class Main extends JavaPlugin{
             registerEvent(new AsyncPlayerChatListener());
         }
 
-        if (config.getUsePlayerJoinListener()) {
+        if (config.getUsePlayerActivityListener()) {
             registerEvent(new OnPlayerJoinListener());
-        }
-
-        if (config.getUsePlayerLeaveListener()) {
             registerEvent(new OnPlayerLeaveListener());
         }
-
     }
 
     private void registerEvent(Listener listener) {
