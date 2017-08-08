@@ -3,6 +3,4 @@ discord-token: PASTE YOUR BOT TOKEN HERE
 discord-channel-name: CHANNEL NAME
 discord-channel-index: 0
 use-chat-listener: true
-use-player-join-listener: true
-use-player-leave-listener: true
-
+use-player-activity-listener: true

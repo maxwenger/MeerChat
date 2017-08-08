@@ -38,11 +38,7 @@ public class Configuration {
         return config.getBoolean("use-chat-listener");
     }
 
-    public boolean getUsePlayerJoinListener(){
-        return config.getBoolean("use-player-join-listener");
-    }
-
-    public boolean getUsePlayerLeaveListener(){
-        return config.getBoolean("use-player-leave-listener");
+    public boolean getUsePlayerActivityListener(){
+        return config.getBoolean("use-player-activity-listener");
     }
 }
