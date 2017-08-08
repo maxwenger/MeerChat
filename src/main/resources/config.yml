@@ -1,11 +1,8 @@
-discord-token: 'REPLACE THIS'
-discord-channel-name: 'REPLACE THIS'
+# More info about this config file can be found on the discord @ PLACE DISCORD LINK HERE
+discord-token: PASTE YOUR BOT TOKEN HERE
+discord-channel-name: CHANNEL NAME
+discord-channel-index: 0
 use-chat-listener: true
 use-player-join-listener: true
 use-player-leave-listener: true
-
-# Use this if you are referencing a channel with the same name
-# Default is 0
-discord-channel-index: 0
-
 

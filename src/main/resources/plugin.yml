@@ -1,10 +1,13 @@
-name: MeerChat
-version: 0.1
-description: Shared chat between Minecraft and Discord
-author: Maxwell Wenger and Ethan Green
-main: net.seasharp.meerchat.Main
-
-commands:
-  meerchat-reload:
-    description: Controls the Meerchat plugin.
-    usage: /meerchat-reload
+{
+  "commands": {
+    "meerchat-reload": {
+      "usage": "/meerchat-reload", 
+      "description": "Controls the Meerchat plugin."
+    }
+  }, 
+  "version": 0.1,
+  "name": "MeerChat", 
+  "author": "Maxwell Wenger and Ethan Green", 
+  "main": "net.seasharp.meerchat.Main", 
+  "description": "Shared chat between Minecraft and Discord"
+}
