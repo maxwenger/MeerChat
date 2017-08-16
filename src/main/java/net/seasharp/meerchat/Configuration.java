@@ -26,12 +26,8 @@ public class Configuration {
         return config.getString("discord-token");
     }
 
-    public String getDiscordChannelName(){
-        return config.getString("discord-channel-name");
-    }
-
-    public int getDiscordChannelIndex(){
-        return config.getInt("discord-channel-index");
+    public String getDiscordChannelID(){
+        return config.getString("discord-channel-id");
     }
 
     public boolean getUseChatListener(){

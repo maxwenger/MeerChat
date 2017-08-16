@@ -19,8 +19,7 @@ public class Main extends JavaPlugin{
     private void subscribeChatBots() {
         DiscordBot discordBot = new DiscordBot(
                 config.getDiscordClientToken(),
-                config.getDiscordChannelName(),
-                config.getDiscordChannelIndex());
+                config.getDiscordChannelID());
 
         SubscribedChatBots.subscribeChatBot(discordBot);
     }

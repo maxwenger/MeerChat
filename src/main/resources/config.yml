@@ -1,6 +1,9 @@
-# More info about this config file can be found on the discord @ PLACE DISCORD LINK HERE
-discord-token: PASTE YOUR BOT TOKEN HERE
-discord-channel-name: CHANNEL NAME
-discord-channel-index: 0
+# Make a discord bot and place token here
+discord-token: token here
+
+# To get your channel id, turn on developer mode in settings -> appearance -> Developer Mode
+# Right Click on the channel and copy channel ID
+discord-channel-id: id here
+
 use-chat-listener: true
 use-player-activity-listener: true

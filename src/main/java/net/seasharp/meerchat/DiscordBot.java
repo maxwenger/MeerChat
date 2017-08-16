@@ -11,10 +11,9 @@ import java.util.Calendar;
 public class DiscordBot implements ChatBot {
 
     private JDA jda;
-    private String channelName;
-    private int channelIndex;
+    private String channelId;
 
-    public DiscordBot(String token, String channelName, int channelIndex) {
+    public DiscordBot(String token, String channelId) {
         try {
             jda = new JDABuilder(AccountType.BOT)
                     .setToken(token)
@@ -26,8 +25,7 @@ public class DiscordBot implements ChatBot {
             e.printStackTrace();
         }
 
-        this.channelName = channelName;
-        this.channelIndex = channelIndex;
+        this.channelId = channelId;
         sendInitializationMessage();
     }
 
@@ -46,7 +44,7 @@ public class DiscordBot implements ChatBot {
     }
 
     public void sendMessage(String message) {
-        TextChannel channel = jda.getTextChannelsByName(channelName, true).get(channelIndex);
+        TextChannel channel = jda.getTextChannelById(channelId);
         channel.sendMessage(message).complete();
     }
 }
