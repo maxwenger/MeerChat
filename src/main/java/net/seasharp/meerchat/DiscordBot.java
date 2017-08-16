@@ -5,13 +5,15 @@ import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.entities.TextChannel;
 
-public class DiscordBot {
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+public class DiscordBot implements ChatBot {
 
     private JDA jda;
-    private String channelName;
-    private int channelIndex;
+    private String channelId;
 
-    public DiscordBot(String token, String channelName, int channelIndex) {
+    public DiscordBot(String token, String channelId) {
         try {
             jda = new JDABuilder(AccountType.BOT)
                     .setToken(token)
@@ -23,12 +25,26 @@ public class DiscordBot {
             e.printStackTrace();
         }
 
-        this.channelName = channelName;
-        this.channelIndex = channelIndex;
+        this.channelId = channelId;
+        sendInitializationMessage();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        sendTerminationMessage();
+        super.finalize();
+    }
+
+    private void sendInitializationMessage() {
+        sendMessage("*[MeerChat v0.1 initialized - " + new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime()) + "]*");
+    }
+
+    private void sendTerminationMessage() {
+        sendMessage("*[MeerChat v0.1 has stopped - " + new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime()) + "]*");
     }
 
     public void sendMessage(String message) {
-        TextChannel channel = jda.getTextChannelsByName(channelName, true).get(channelIndex);
+        TextChannel channel = jda.getTextChannelById(channelId);
         channel.sendMessage(message).complete();
     }
 }
