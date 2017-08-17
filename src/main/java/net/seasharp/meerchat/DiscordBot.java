@@ -12,6 +12,7 @@ public class DiscordBot implements ChatBot {
 
     private JDA jda;
     private String channelId;
+    private boolean enabled = true;
 
     public DiscordBot(String token, String channelId) {
         try {
@@ -22,7 +23,7 @@ public class DiscordBot implements ChatBot {
             // Init the Discord chat event listener
             jda.addEventListener(new DiscordCommandListener());
         } catch (Exception e) {
-            e.printStackTrace();
+            disableBot(e);
         }
 
         this.channelId = channelId;
@@ -44,7 +45,19 @@ public class DiscordBot implements ChatBot {
     }
 
     public void sendMessage(String message) {
-        TextChannel channel = jda.getTextChannelById(channelId);
-        channel.sendMessage(message).complete();
+        if (enabled) {
+            try {
+                TextChannel channel = jda.getTextChannelById(channelId);
+                channel.sendMessage(message).complete();
+            } catch (Exception e) {
+                disableBot(e);
+            }
+        }
+    }
+
+    private void disableBot(Exception e) {
+        System.out.println("[MeerChat] " + e.toString());
+        System.out.println("[MeerChat] Discord chat bot disabled. Unable to connect to Discord API.");
+        enabled = false;
     }
 }
