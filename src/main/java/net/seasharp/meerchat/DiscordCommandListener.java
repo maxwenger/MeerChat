@@ -2,10 +2,7 @@ package net.seasharp.meerchat;
 
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
-import org.apache.logging.log4j.message.Message;
-import org.bukkit.Bukkit;
 
-import static org.bukkit.Bukkit.getLogger;
 import static org.bukkit.Bukkit.getServer;
 
 public class DiscordCommandListener extends ListenerAdapter{
